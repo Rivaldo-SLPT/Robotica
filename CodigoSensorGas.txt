@@ -1,0 +1,14 @@
+// Define el número de pin para el sensor de gas (GPIO 35)
+const int sensorPin = 25;
+
+void setup() {
+  Serial.begin(9600);  // Inicia la comunicación serie a 9600 baudios
+}
+
+void loop() {
+  // Lee e imprime el valor analógico del sensor
+  Serial.print("Analog output: ");
+  Serial.println(analogRead(sensorPin));
+
+  delay(100);  // Espera de 100 milisegundos
+}
